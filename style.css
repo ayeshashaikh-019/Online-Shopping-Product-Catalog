@@ -1,0 +1,544 @@
+/* ==============================
+   GENERAL STYLING
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+
+    /* Relative unit */
+    font-size: 1rem;
+}
+
+
+/* ==============================
+   HEADER
+   ============================== */
+
+.header {
+    background-color: #1f2937;
+    color: white;
+
+    /* Relative units */
+    padding: 2rem 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+.store-logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 1rem;
+}
+
+
+/* ==============================
+   SEARCH AREA
+   ============================== */
+
+.search-section {
+    text-align: center;
+
+    padding: 2rem 5%;
+
+    background-color: white;
+}
+
+.search-section h1 {
+    font-size: 2rem;
+
+    margin-bottom: 1.2rem;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 0.5rem;
+
+    width: 80%;
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 0.8rem 1rem;
+
+    border: 1px solid #ccc;
+    border-radius: 0.4rem;
+
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 0.8rem 1.5rem;
+
+    border: none;
+    border-radius: 0.4rem;
+
+    background-color: #2563eb;
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+}
+
+
+/* ==============================
+   CATEGORY NAVIGATION
+   ============================== */
+
+.category-nav {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    padding: 1rem 5%;
+
+    background-color: #e5e7eb;
+}
+
+.category-nav a {
+    text-decoration: none;
+
+    color: #1f2937;
+
+    font-weight: bold;
+
+    padding: 0.5rem 1rem;
+
+    border-radius: 0.3rem;
+}
+
+.category-nav a:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+
+/* ==============================
+   PRODUCT SECTION
+   ============================== */
+
+.product-section {
+    padding: 2rem 5%;
+}
+
+.product-section h2 {
+    text-align: center;
+
+    margin-bottom: 1.5rem;
+
+    font-size: 1.8rem;
+}
+
+
+/* ==============================
+   PRODUCT CONTAINER
+   FLEXBOX
+   ============================== */
+
+.product-container {
+    display: flex;
+
+    /* Cards move to next line when necessary */
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    align-items: stretch;
+
+    gap: 1.5rem;
+}
+
+
+/* ==============================
+   PRODUCT CARD
+   ============================== */
+
+.product-card {
+    background-color: white;
+
+    border-radius: 0.7rem;
+
+    padding: 1.2rem;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1 1 calc(25% - 1.5rem);
+
+    min-width: 0;
+
+    /* Prevents long content from breaking the card */
+    overflow-wrap: anywhere;
+
+    transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ==============================
+   IMAGE PLACEHOLDER
+   ============================== */
+
+.product-image {
+    height: 10rem;
+
+    background-color: #dbeafe;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5rem;
+
+    margin-bottom: 1rem;
+
+    color: #1d4ed8;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   PRODUCT NAME
+   ============================== */
+
+.product-card h3 {
+    font-size: 1.1rem;
+
+    margin-bottom: 0.7rem;
+
+    /* Allows long names to wrap */
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+/* ==============================
+   PRICE
+   ============================== */
+
+.price {
+    font-size: 1.2rem;
+
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+
+    color: #16a34a;
+}
+
+
+/* ==============================
+   ACTION BUTTON
+   ============================== */
+
+.action-button {
+    margin-top: auto;
+
+    width: 100%;
+
+    padding: 0.75rem;
+
+    border: none;
+
+    border-radius: 0.4rem;
+
+    background-color: #2563eb;
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+}
+
+.action-button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* ==============================
+   PROMOTIONAL SECTION
+   ============================== */
+
+.promo-section {
+    text-align: center;
+
+    padding: 2.5rem 5%;
+
+    background-color: #fde68a;
+
+    margin: 1rem 5% 2rem;
+
+    border-radius: 0.7rem;
+}
+
+.promo-section h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 0.7rem;
+}
+
+.promo-section p {
+    margin-bottom: 1rem;
+
+    font-size: 1rem;
+}
+
+.promo-button {
+    padding: 0.8rem 1.5rem;
+
+    border: none;
+
+    border-radius: 0.4rem;
+
+    background-color: #111827;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.footer {
+    background-color: #1f2937;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1.5rem 5%;
+
+    font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   MEDIA QUERY 1 - TABLET
+   Approx. 768px and below
+   ================================================== */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 1.5rem 4%;
+    }
+
+    .store-logo {
+        font-size: 1.7rem;
+    }
+
+    .tagline {
+        font-size: 0.9rem;
+    }
+
+    .search-section {
+        padding: 1.5rem 4%;
+    }
+
+    .search-section h1 {
+        font-size: 1.7rem;
+    }
+
+    .search-box {
+        width: 90%;
+    }
+
+    .category-nav {
+        gap: 0.5rem;
+        padding: 0.8rem 4%;
+    }
+
+    .category-nav a {
+        font-size: 0.9rem;
+    }
+
+    .product-section {
+        padding: 1.5rem 4%;
+    }
+
+    .product-container {
+        gap: 1rem;
+    }
+
+    /* 2 cards per row on tablet */
+    .product-card {
+        flex: 1 1 calc(50% - 1rem);
+
+        padding: 1rem;
+    }
+
+    .product-card h3 {
+        font-size: 1rem;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+
+    .product-image {
+        height: 9rem;
+    }
+
+    .promo-section {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
+
+
+/* ==================================================
+   MEDIA QUERY 2 - MOBILE
+   Approx. 480px and below
+   ================================================== */
+
+@media (max-width: 480px) {
+
+    .header {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 1.2rem 3%;
+    }
+
+    .store-logo {
+        font-size: 1.5rem;
+    }
+
+    .tagline {
+        font-size: 0.85rem;
+    }
+
+    .search-section {
+        padding: 1.2rem 3%;
+    }
+
+    .search-section h1 {
+        font-size: 1.4rem;
+
+        margin-bottom: 1rem;
+    }
+
+    /* Search area becomes vertical */
+    .search-box {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 0.6rem;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+    }
+
+    .category-nav {
+        flex-direction: column;
+
+        gap: 0.4rem;
+
+        padding: 0.8rem 3%;
+    }
+
+    .category-nav a {
+        width: 100%;
+
+        text-align: center;
+
+        font-size: 0.85rem;
+    }
+
+    .product-section {
+        padding: 1.2rem 3%;
+    }
+
+    .product-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-container {
+        gap: 0.8rem;
+    }
+
+    /* 1 card per row on mobile */
+    .product-card {
+        flex: 1 1 100%;
+
+        padding: 0.9rem;
+    }
+
+    .product-image {
+        height: 8rem;
+    }
+
+    .product-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .action-button {
+        font-size: 0.9rem;
+
+        padding: 0.7rem;
+    }
+
+    .promo-section {
+        padding: 1.5rem 3%;
+
+        margin: 0.8rem 3% 1.5rem;
+    }
+
+    .promo-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .promo-section p {
+        font-size: 0.9rem;
+    }
+}
